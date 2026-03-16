@@ -47,11 +47,11 @@ function ttsUsage(): ReplyPayload {
     text:
       `🔊 **TTS (Text-to-Speech) Help**\n\n` +
       `**Commands:**\n` +
-      `• /tts on — Enable automatic TTS for replies\n` +
       `• /tts off — Disable TTS\n` +
-      `• /tts always — Auto-play TTS for all messages\n` +
-      `• /tts inbound — Auto-play TTS only for inbound messages\n` +
-      `• /tts tagged — Auto-play TTS only when explicitly tagged\n` +
+      `• /tts on (equals always) — Enable automatic TTS for replies\n` +
+      `• /tts inbound — TTS for inbound messages only\n` +
+      `• /tts tagged — TTS for tagged messages only\n` +
+      `• /tts always — Always enable TTS\n` +
       `• /tts status — Show current settings\n` +
       `• /tts provider [name] — View/change provider\n` +
       `• /tts limit [number] — View/change text limit\n` +
@@ -66,9 +66,10 @@ function ttsUsage(): ReplyPayload {
       `• Summary ON: AI summarizes, then generates audio\n` +
       `• Summary OFF: Truncates text, then generates audio\n\n` +
       `**Examples:**\n` +
-      `/tts always\n` +
+      `/tts on\n` +
       `/tts inbound\n` +
       `/tts tagged\n` +
+      `/tts always\n` +
       `/tts provider edge\n` +
       `/tts limit 2000\n` +
       `/tts audio Hello, this is a test!`,
